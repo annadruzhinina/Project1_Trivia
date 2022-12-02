@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body class="flex">
+    <div class="wrapper hidden" id="chooseCategory">
+      <div class="classcontainer">
+        <div class="quiz-head">
+          <div class="quiz-title-category">Quize Game</div>
+        </div>
+        <div class="pickCategory">
+          <div class="startTitle">
+            <h1>Lets start game!</h1>
+            <h1>Pick your category</h1>
+          </div>
+
+          <div class="categoryBtn">
+            <button type="button" id="catoryAbtn">Category A</button>
+            <button type="button" id="catoryBbtn">Category B</button>
+            <button type="button" id="catoryCbtn">Category C</button>
+            <button type="button" id="catoryDbtn">Category D</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper" id="quiz">
+      <div class="classcontainer">
+        <div class="quiz-head">
+          <div class="quiz-title">Quize Game</div>
+          <div class="quiz-score flex">
+            <span id="counterCorrectAnswer">0</span>/<span id="total-question"
+              >4</span
+            >
+
+            <div class="stars">⭐️<span class="stars-score"></span></div>
+          </div>
+        </div>
+        <div class="quiz-body">
+          <h2 class="quiz-question" id="question">
+            What is the full form of HTTP? <br /><span class="category"
+              >Technology</span
+            >
+          </h2>
+
+          <ul class="quiz-options">
+            <li id="answer1">1. HyperText Transfer Protocol</li>
+            <li id="answer2">2. HyperText Transfer Port</li>
+            <li id="answer3">3. HyperText Transfer Pro</li>
+            <li id="answer4">4. HyperText Protocol</li>
+          </ul>
+          <div class="result">
+            <!-- result here -->
+          </div>
+        </div>
+        <div class="quiz-foot">
+          <button type="button" id="check_answer">Check answer</button>
+          <button type="button" id="play-again">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper hidden" id="complete">
+      <div class="classcontainer">
+        <div class="complete-page">
+          <h1 class="quiz-title-complete">QUIZ COMPLETE</h1>
+          <div class="finishScoreText">
+            <h1>Your Score:</h1>
+            <h2 class="finishScore">finishScore text</h2>
+          </div>
+          <div class="startNewGameBtn">
+            <button type="button">Start a new Game!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
