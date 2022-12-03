@@ -11,17 +11,33 @@
   --light-color: #fff;
   --dark-color: #000;
   --grey-color: #f2f2f2;
+  --wrongRed: #f16d6d;
+  --rightGreen: #2ced26;
+
   --transition: all 300ms ease-in-out;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.wrongAnswer {
+  background: var(--wrongRed) !important;
+  border-color: #d37373 !important;
+  box-shadow: 0 4px 0 0 #e88b8b !important;
+}
+
+.rightAnswer {
+  background: var(--rightGreen) !important;
+  border-color: green !important;
+  box-shadow: 0 4px 0 0 greenyellow !important;
 }
 /* centering */
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 90%;
 }
 
 body {
@@ -192,7 +208,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  height: 100%;
+  white-space: normal;
+  table-layout: fixed;
   margin: 1rem auto;
   text-transform: uppercase;
   cursor: pointer;
@@ -235,7 +255,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1vw;
+  grid-gap: 2vw;
 }
 
 .categoryBtn button:hover {

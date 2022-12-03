@@ -16,7 +16,7 @@
     <script src="./app.js" defer></script>
   </head>
   <body class="flex">
-    <div class="wrapper hidden" id="chooseCategory">
+    <div class="wrapper" id="chooseCategory">
       <div class="classcontainer">
         <div class="quiz-head">
           <div class="quiz-title-category">Quize Game</div>
@@ -36,13 +36,13 @@
         </div>
       </div>
     </div>
-    <div class="wrapper" id="quiz">
+    <div class="wrapper hidden" id="quiz">
       <div class="classcontainer">
         <div class="quiz-head">
           <div class="quiz-title">Quize Game</div>
           <div class="quiz-score flex">
             <span id="counterCorrectAnswer">0</span>/<span id="total-question"
-              >4</span
+              >10</span
             >
 
             <div class="stars">⭐️<span class="stars-score"></span></div>
@@ -61,12 +61,12 @@
             <li id="answer3">3. HyperText Transfer Pro</li>
             <li id="answer4">4. HyperText Protocol</li>
           </ul>
-          <div class="result">
-            <!-- result here -->
-          </div>
         </div>
         <div class="quiz-foot">
           <button type="button" id="check_answer">Check answer</button>
+          <button type="button" id="next_question" class="">
+            Next question
+          </button>
           <button type="button" id="play-again">Play Again</button>
         </div>
       </div>
