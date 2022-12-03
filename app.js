@@ -407,9 +407,10 @@ const gameState = {
   index: 0,
   currentCategory: "undefined",
   currentAnswer: "",
+  currentAnswerElement: undefined,
   currentAnswerCorrect: false,
   starScore: 0,
-  counterCorrectAnswer: 0,
+  counterAnswer: 0,
   maxQuestions: 10,
 };
 //category selection page
@@ -427,12 +428,22 @@ function chooseCategoriesClick(event) {
   view.chooseCategory.classList.add("hidden");
   //display quiz page
   view.quiz.classList.remove("hidden");
+  view.nextQuestion.classList.add("hidden");
   // -------Reset game--------------------------------------------------------
   gameState.index = 0;
   gameState.currentAnswer = "";
   gameState.starScore = 0;
-  gameState.counterCorrectAnswer = 0;
+  gameState.counterAnswer = 1;
   gameState.maxQuestions = 10;
+
+  view.checkAnswer.classList.remove("hidden");
+  view.checkAnswer.classList.remove("wrongAnswer");
+  view.checkAnswer.classList.remove("rightAnswer");
+  view.nextQuestion.classList.add("hidden");
+  view.answer1.classList.remove("selected");
+  view.answer2.classList.remove("selected");
+  view.answer3.classList.remove("selected");
+  view.answer4.classList.remove("selected");
   displayQuiz();
 }
 
@@ -445,7 +456,7 @@ function displayQuiz() {
   console.log("NEXT index " + index);
   console.log(`display quiz ${index}`);
   //console.log(gameQuestionsSet[index]);
-  console.log(gameState.counterCorrectAnswer);
+  console.log(gameState.counterAnswer);
   //gameState.index = index;
   let question = gameState.currentCategory.gameQuestionsSet[index];
   view.titleQuestion.innerText = question.titleQuestion;
@@ -454,7 +465,7 @@ function displayQuiz() {
   view.answer3.innerText = question.answers[2];
   view.answer4.innerText = question.answers[3];
 
-  view.counterCorrectAnswer.innerText = gameState.counterCorrectAnswer;
+  view.counterCorrectAnswer.innerText = gameState.counterAnswer;
   view.starScore.innerText = gameState.starScore;
 
   view.answer1.classList.remove("selected");
@@ -473,51 +484,26 @@ function checkAnswer(event) {
   );
 
   view.nextQuestion.classList.remove("hidden");
-  view.checkAnswer.classList.remove("wrongAnswer");
-  view.checkAnswer.classList.remove("rightAnswer");
+  gameState.currentAnswerElement.classList.remove("wrongAnswer");
+  gameState.currentAnswerElement.classList.remove("rightAnswer");
 
   if (
     gameState.currentAnswer ===
     gameState.currentCategory.gameQuestionsSet[gameState.index].correct_answer
   ) {
-    // gameState.counterCorrectAnswer += 1;
-    // gameState.starScore += 5;
-    // gameState.index += 1;
-    // console.log("my new index " + gameState.index);
-    // gameState.currentQuestion = randomQuestion(
-    //   gameState.currentCategory.gameQuestionsSet
-    // );
-
     view.checkAnswer.classList.add("rightAnswer");
+    gameState.currentAnswerElement.classList.add("rightAnswer");
     gameState.currentAnswerCorrect = true;
-
-    //console.log(gameState.currentQuestion);
-    //displayQuiz();
   } else {
-    // gameState.counterCorrectAnswer += 1;
-    // gameState.starScore += 0;
-    // gameState.index += 1;
-    // gameState.currentQuestion = randomQuestion(
-    //   gameState.currentCategory.gameQuestionsSet
-    // );
-
     view.checkAnswer.classList.add("wrongAnswer");
+    gameState.currentAnswerElement.classList.add("wrongAnswer");
     gameState.currentAnswerCorrect = false;
   }
 
-  // последний ли вопрос?
-  if (gameState.counterCorrectAnswer === gameState.maxQuestions) {
-    view.complete.classList.remove("hidden");
-    view.quiz.classList.add("hidden");
-    view.finishScore.innerText = gameState.starScore;
-  } else {
-    // НЕТ
-    view.nextQuestion.classList.remove("hidden");
-    // view.checkAnswer.classList.add("hidden");
-    //displayQuiz();
-  }
-  //view.checkAnswer.classList.remove("hidden");
-  console.log(gameState.counterCorrectAnswer);
+  view.nextQuestion.classList.remove("hidden");
+  view.checkAnswer.classList.add("hidden");
+
+  console.log(gameState.counterAnswer);
 }
 view.checkAnswer.addEventListener("click", checkAnswer);
 
@@ -527,20 +513,43 @@ function nextQuestionClick(event) {
   view.checkAnswer.classList.remove("rightAnswer");
   view.nextQuestion.classList.add("hidden");
 
+  view.checkAnswer.disabled = false;
+
   if (gameState.currentAnswerCorrect) {
     gameState.starScore += 5;
   }
 
   gameState.currentAnswerCorrect = false;
-  gameState.counterCorrectAnswer += 1;
+  gameState.counterAnswer += 1;
   gameState.index += 1;
 
   console.log("my new index " + gameState.index);
-  gameState.currentQuestion = randomQuestion(
-    gameState.currentCategory.gameQuestionsSet
-  );
+  gameState.currentQuestion =
+    gameState.currentCategory.gameQuestionsSet[gameState.index];
 
-  displayQuiz();
+  // randomQuestion(
+  //   gameState.currentCategory.gameQuestionsSet
+  // );
+
+  view.answer1.classList.remove("wrongAnswer");
+  view.answer1.classList.remove("rightAnswer");
+  view.answer2.classList.remove("wrongAnswer");
+  view.answer2.classList.remove("rightAnswer");
+  view.answer3.classList.remove("wrongAnswer");
+  view.answer3.classList.remove("rightAnswer");
+  view.answer4.classList.remove("wrongAnswer");
+  view.answer4.classList.remove("rightAnswer");
+
+  // последний ли вопрос?
+  if (gameState.counterAnswer === gameState.maxQuestions) {
+    view.complete.classList.remove("hidden");
+    view.quiz.classList.add("hidden");
+    view.finishScore.innerText = gameState.starScore;
+  } else {
+    // НЕТ
+    // view.nextQuestion.classList.remove("hidden");
+    displayQuiz();
+  }
 }
 view.nextQuestion.addEventListener("click", nextQuestionClick);
 
@@ -568,6 +577,7 @@ function chooseAnswer1Click(event) {
   view.answer3.classList.remove("selected");
   view.answer4.classList.remove("selected");
 
+  gameState.currentAnswerElement = view.answer1;
   gameState.currentAnswer = view.answer1.innerText;
   console.log(gameState.currentAnswer);
 }
@@ -579,6 +589,7 @@ function chooseAnswer2Click(event) {
   view.answer3.classList.remove("selected");
   view.answer4.classList.remove("selected");
 
+  gameState.currentAnswerElement = view.answer2;
   gameState.currentAnswer = view.answer2.innerText;
   console.log(gameState.currentAnswer);
 }
@@ -590,6 +601,7 @@ function chooseAnswer3Click(event) {
   view.answer3.classList.add("selected");
   view.answer4.classList.remove("selected");
 
+  gameState.currentAnswerElement = view.answer3;
   gameState.currentAnswer = view.answer3.innerText;
   console.log(gameState.currentAnswer);
 }
@@ -601,6 +613,7 @@ function chooseAnswer4Click(event) {
   view.answer3.classList.remove("selected");
   view.answer4.classList.add("selected");
 
+  gameState.currentAnswerElement = view.answer4;
   gameState.currentAnswer = view.answer4.innerText;
   console.log(gameState.currentAnswer);
 }
@@ -611,4 +624,4 @@ view.answer2.addEventListener("click", chooseAnswer2Click);
 view.answer3.addEventListener("click", chooseAnswer3Click);
 view.answer4.addEventListener("click", chooseAnswer4Click);
 
-displayQuiz();
+// displayQuiz();

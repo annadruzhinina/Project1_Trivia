@@ -21,15 +21,25 @@
   display: none !important;
 }
 
+/* Selected button style  */
+.selected {
+  background-color: var(--grey-color) !important;
+  color: var(--dark-color) !important;
+  border-color: var(--grey-color) !important;
+  box-shadow: 0 4px 0 0 #bbb !important;
+}
+
 .wrongAnswer {
   background: var(--wrongRed) !important;
   border-color: #d37373 !important;
+  color: var(--light-color) !important;
   box-shadow: 0 4px 0 0 #e88b8b !important;
 }
 
 .rightAnswer {
   background: var(--rightGreen) !important;
   border-color: green !important;
+  color: darkgreen !important;
   box-shadow: 0 4px 0 0 greenyellow !important;
 }
 /* centering */
@@ -127,14 +137,6 @@ body {
 
 .quiz-options li:active {
   transform: scale(0.97);
-}
-
-/* Selected button style  */
-.selected {
-  background-color: var(--grey-color) !important;
-  color: var(--dark-color) !important;
-  border-color: var(--grey-color) !important;
-  box-shadow: 0 4px 0 0 #bbb !important;
 }
 
 .quiz-title-category,
