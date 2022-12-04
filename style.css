@@ -2,8 +2,12 @@
 
 /* Module */
 .swal2-icon.swal2-error {
-  border-color: #8854c0 !important;
-  color: #8854c0 !important;
+  border-color: #7066e0 !important;
+  color: #7066e0 !important;
+}
+.swal2-container.swal2-center > .swal2-popup {
+  width: 600px !important;
+  padding: 3.5em !important;
 }
 
 * {
@@ -159,13 +163,36 @@ body {
   padding-bottom: 0.5rem;
   color: var(--light-purple-color);
 }
+.max-score {
+  padding-top: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #858c32,
+    #f9a825,
+    #ff5722
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .finishScoreText {
   text-align: center;
   font-size: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
   color: var(--light-purple-color);
+}
+.finishScoreText .finishScore {
+  padding-top: 40px;
+  font-size: 2rem;
 }
 
 .pickCategory {
@@ -250,7 +277,7 @@ body {
   box-shadow: 0 4px 0 0 #bbb;
 }
 .startNewGameBtn button:hover {
-  background-color: #e6e6e6e6;
+  background: linear-gradient(to right, #500ac9, #7e57c2, #2196f3, #26c6da);
   box-shadow: 0 4px 0 0 #a7a7a7;
 }
 

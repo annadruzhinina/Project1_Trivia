@@ -8,6 +8,7 @@ const view = {
   titleQuestion: document.getElementById("question"),
   maxQuestions: document.getSelection(".total-question"),
   starScore: document.querySelector(".stars-score"),
+  maxScoreText: document.querySelector(".max-score"),
 
   //🍄 buttons
   checkAnswer: document.getElementById("check_answer"),
@@ -79,7 +80,7 @@ const gameQuestionsSet = [
   },
   {
     titleQuestion:
-      "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
+      "In CSS, which of these values CANNOT be used with the `position` property?",
     correct_answer: "center",
     answers: ["center", "static", "absolute", "relative"],
   },
@@ -412,6 +413,7 @@ const gameState = {
   starScore: 0,
   counterAnswer: 0,
   maxQuestions: 10,
+  maxScoreText: "",
 };
 //category selection page
 function chooseCategoriesClick(event) {
@@ -489,7 +491,7 @@ function checkAnswer(event) {
     //   text: "You must select at list one answer!",
     //   footer: '<a href="">Why do I have this issue?</a>',
     // });
-    var audio = new Audio("audio_file.mp3");
+    var audio = new Audio("Cute-cat-meow-sound.mp3");
     audio.play();
 
     Swal.fire({
@@ -570,7 +572,16 @@ function nextQuestionClick(event) {
   view.answer4.classList.remove("rightAnswer");
 
   // последний ли вопрос?
-  if (gameState.counterAnswer === gameState.maxQuestions) {
+  if (
+    gameState.counterAnswer === gameState.maxQuestions &&
+    gameState.starScore === 45
+  ) {
+    view.maxScoreText.classList.remove("hidden");
+    view.maxScoreText.innerText = "WOW! You answered all questions right!";
+    view.complete.classList.remove("hidden");
+    view.quiz.classList.add("hidden");
+    view.finishScore.innerText = gameState.starScore;
+  } else if (gameState.counterAnswer === gameState.maxQuestions) {
     view.complete.classList.remove("hidden");
     view.quiz.classList.add("hidden");
     view.finishScore.innerText = gameState.starScore;
@@ -589,6 +600,7 @@ view.startNewGameBtn.addEventListener("click", StartNewGame);
 function StartNewGame(event) {
   view.complete.classList.add("hidden");
   view.chooseCategory.classList.remove("hidden");
+  view.maxScoreText.classList.add("hidden");
 }
 
 // -------Choose Category---------------------------------------------------
