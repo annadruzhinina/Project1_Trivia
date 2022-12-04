@@ -50,7 +50,7 @@ const gameQuestionsSet = [
   },
   {
     titleQuestion:
-      "Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
+      "Moore`s law originally stated that the number of transistors on a microprocessor chip would double every...",
     correct_answer: "Year",
     answers: ["Four Years", "Two Years", "Eight Years", "Year"],
   },
@@ -482,7 +482,34 @@ function checkAnswer(event) {
       gameState.currentCategory.gameQuestionsSet[gameState.index].correct_answer
     } `
   );
+  if (gameState.currentAnswerElement === undefined) {
+    // Swal.fire({
+    //   icon: "error",
+    //   title: "Oops...",
+    //   text: "You must select at list one answer!",
+    //   footer: '<a href="">Why do I have this issue?</a>',
+    // });
+    var audio = new Audio("audio_file.mp3");
+    audio.play();
 
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Could you please select one answer",
+      width: 600,
+      height: 600,
+      padding: "3em",
+      color: "#716add",
+      background: "#fff url(https://sweetalert2.github.io/images/trees.png)",
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("https://sweetalert2.github.io/images/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+    });
+    return;
+  }
   view.nextQuestion.classList.remove("hidden");
   gameState.currentAnswerElement.classList.remove("wrongAnswer");
   gameState.currentAnswerElement.classList.remove("rightAnswer");
@@ -520,6 +547,8 @@ function nextQuestionClick(event) {
   }
 
   gameState.currentAnswerCorrect = false;
+  gameState.currentAnswer = "";
+  gameState.currentAnswerElement = undefined;
   gameState.counterAnswer += 1;
   gameState.index += 1;
 

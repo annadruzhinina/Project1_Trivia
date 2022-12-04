@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+/* Module */
+.swal2-icon.swal2-error {
+  border-color: #8854c0 !important;
+  color: #8854c0 !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +18,7 @@
   --dark-color: #000;
   --grey-color: #f2f2f2;
   --wrongRed: #f16d6d;
-  --rightGreen: #2ced26;
+  --rightGreen: #9ae597;
 
   --transition: all 300ms ease-in-out;
 }
@@ -31,23 +37,22 @@
 
 .wrongAnswer {
   background: var(--wrongRed) !important;
-  border-color: #d37373 !important;
+  border-color: #e25959 !important;
   color: var(--light-color) !important;
-  box-shadow: 0 4px 0 0 #e88b8b !important;
+  box-shadow: 0 3px 0 0 #e25959 !important;
 }
 
 .rightAnswer {
   background: var(--rightGreen) !important;
-  border-color: green !important;
-  color: darkgreen !important;
-  box-shadow: 0 4px 0 0 greenyellow !important;
+  border-color: var(--rightGreen) !important;
+  color: var(--dark-color) !important;
+  box-shadow: 0 4px 0 0 #5f9a5d !important;
 }
 /* centering */
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
 }
 
 body {
