@@ -22,11 +22,12 @@ Quiz questions can help prevent this process to go so fast as it serves as a for
 4. On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
 
 5. Choose category;
-   ![category](src/choose_category.jpg)<br>
-6. Display random questions from the question set;<br>
-   ![category](src/question.jpg)<br>
-7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:<br>
-   ![category](src/selected_question.jpg)<br>
+
+<div style="text-align:center"><img src="choose_category.jpg" /></div>
+
+![category](src/choose_category.jpg)<br> 6. Display random questions from the question set;<br>
+![category](src/question.jpg)<br> 7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:<br>
+![category](src/selected_question.jpg)<br>
 
 - if the answer is correct: the button's background is changed to green color, starScore update +5, question +1/10, and appear button "Next Question";<br>
   ![category](src/right_answer.jpg)<br>
