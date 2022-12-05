@@ -56,7 +56,7 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 <a id="resources"></a>
 ## Additional resources:
 
-1. Customizable JavaScript popup boxes
+###1. Customizable JavaScript popup boxes
 
 1.1 A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
 > [https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
