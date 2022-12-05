@@ -56,29 +56,35 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 <a id="resources"></a>
 ## Additional resources:
 
-###1. Customizable JavaScript popup boxes
+### 1. Customizable JavaScript popup boxes
 
 1.1 A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
 > [https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
 
-1.2 Download & Install
+### 1.2 Download & Install
 This: 
 
 >```bash
 >npm install sweetalert2
 >```
-1.3 Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
+### 1.3 Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
 This:
 
 >```bash
 ><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 >```
 
-2. Make a set of questions
+## 2. Make a set of questions
 
-- Generate Trivia questions: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php);
+### 2.1 Generate Trivia questions: 
+>[https://opentdb.com/api_config.php](https://opentdb.com/api_config.php);
 
-- JSON Pretty Print: >[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print);
+### 2.2 
+>JSON Pretty Print: >[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print);
+
+
+
+
 
 Before You Begin:
 
