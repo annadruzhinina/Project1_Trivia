@@ -160,7 +160,7 @@ body {
   text-align: center;
   font-size: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2.5rem;
   color: var(--light-purple-color);
 }
 .max-score {
@@ -277,8 +277,9 @@ body {
   box-shadow: 0 4px 0 0 #bbb;
 }
 .startNewGameBtn button:hover {
-  background: linear-gradient(to right, #500ac9, #7e57c2, #2196f3, #26c6da);
+  background: linear-gradient(to right, #601ed3, #6c47ac, #574577);
   box-shadow: 0 4px 0 0 #a7a7a7;
+  color: var(--light-color);
 }
 
 .startNewGameBtn button:active {

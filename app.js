@@ -497,7 +497,7 @@ function checkAnswer(event) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Could you please select one answer",
+      text: "Could you please select answer",
       width: 600,
       height: 600,
       padding: "3em",
