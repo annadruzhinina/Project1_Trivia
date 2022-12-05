@@ -26,7 +26,7 @@ This is a front-end web application developed as my first personal project while
 Assembly.
 
 <a id="description"></a>
-## Trivia Game, Project Description:
+## Project Description:
 
 Trivia is a type of game in which players are asked questions about different topics and they have to get as many correct answers as possible. Trivia contests are usually organized as part of events, parties and as pub entertainment. Normally contestants are organized in teams and the team who gets the higher score wins.
 
