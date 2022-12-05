@@ -78,7 +78,7 @@ This:
 
 > [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php) ;
 
-> [https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print) - JSON Pretty Print;
+ [https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print) - JSON Pretty Print;
 
 Before You Begin:
 
