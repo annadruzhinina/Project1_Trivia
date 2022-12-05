@@ -52,21 +52,21 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 Front-end: HTML, CSS;
 
+<a id="resources"></a>
+## Additional resources:
 
-1. Additional resources:
+1. Customizable JavaScript popup boxes
 
 > A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
+[https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
 
-> [https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
-
-1. Download & Install
+2. Download & Install
 This: 
 
 ```bash
 npm install sweetalert2
 ```
-
-1. Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
+3. Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
 This:
 
 ```bash
