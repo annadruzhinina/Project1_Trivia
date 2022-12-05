@@ -11,7 +11,7 @@ Assembly.
 
 ### Project Description:
 
-Trivia is a type of game in which players (who can play individually) are asked questions about different topics and they have to get as many correct answers as possible. Trivia contests are usually organized as part of events, parties and as pub entertainment. Normally contestants are organized in teams and the team who gets the higher score wins.
+Trivia is a type of game in which players are asked questions about different topics and they have to get as many correct answers as possible. Trivia contests are usually organized as part of events, parties and as pub entertainment. Normally contestants are organized in teams and the team who gets the higher score wins.
 
 ### Benefits of playing trivia and quiz games:
 
@@ -22,16 +22,16 @@ Quiz questions can help prevent this process to go so fast as it serves as a for
 4. On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
 
 5. Choose category;
-   ![category](src/choose_category.jpg)
-6. Display random questions from the question set;
-   ![category](src/question.jpg)
-7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:
-   ![category](src/selected_question.jpg)
+   ![category](src/choose_category.jpg)<br>
+6. Display random questions from the question set;<br>
+   ![category](src/question.jpg)<br>
+7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:<br>
+   ![category](src/selected_question.jpg)<br>
 
-- if the answer is correct: the button's background is changed to green color, starScore update +5, question +1/10, and appear button "Next Question";
-  ![category](src/right_answer.jpg)
-- if the answer is incorrect: the button's background is changed to red color, starScore dosen't update, question +1/10, and appear button "Next Question";
-  ![category](src/wrong_answer.jpg)
+- if the answer is correct: the button's background is changed to green color, starScore update +5, question +1/10, and appear button "Next Question";<br>
+  ![category](src/right_answer.jpg)<br>
+- if the answer is incorrect: the button's background is changed to red color, starScore dosen't update, question +1/10, and appear button "Next Question";<br>
+  ![category](src/wrong_answer.jpg)<br>
 
 4. Final screen:
 
