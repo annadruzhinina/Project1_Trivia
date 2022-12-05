@@ -49,9 +49,9 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 <a id="technologiesUsed"></a>
 ## Technologies Used
->
-Front-end: HTML, CSS; <br>
-Back-end: JavaScript;
+
+- Front-end: HTML, CSS; <br>
+- Back-end: JavaScript;
 
 <a id="resources"></a>
 ## Additional resources:
