@@ -8,7 +8,7 @@
 1. [Live demo](##liveDemo)
 1. [Description](##description)
 1. [Benefits of playing trivia and quiz games](##benefits)
-1. [Technology](##technology)  
+1. [Technology](#technology)  
 
 <!-- /MarkdownTOC -->
 </details>
