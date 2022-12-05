@@ -74,13 +74,13 @@ This:
 ><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 >```
 
-## 2. Make a set of questions
+### 2. Make a set of questions
 
-### 2.1 Generate Trivia questions: 
+#### Generate Trivia questions: 
 >[https://opentdb.com/api_config.php](https://opentdb.com/api_config.php);
 
-### 2.2 
->JSON Pretty Print: >[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print);
+### JSON Pretty Print: 
+>[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print);
 
 
 
