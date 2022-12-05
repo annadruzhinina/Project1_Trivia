@@ -79,24 +79,16 @@ This:
 #### Generate Trivia questions: 
 >[https://opentdb.com/api_config.php](https://opentdb.com/api_config.php);
 
-### JSON Pretty Print: 
+#### JSON Pretty Print: 
 >[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print);
 
 
+## Before You Begin:
 
-
-
-Before You Begin:
-
-
-
-
-3. If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
-4. On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
-
-5. Choose category;
-
-<div style="text-align:center"><img src="choose_category.jpg" /></div>
+#### 1. Choose category;
+<p align="center" width="100%">
+    <img width="33%" src="choose_category.jpg"> 
+</p>
 
 ![category](src/choose_category.jpg)<br> 6. Display random questions from the question set;<br>
 ![category](src/question.jpg)<br> 7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:<br>
@@ -130,3 +122,7 @@ Future Features:
 - correct and incorrect answers by team,
 
 5. Calculate the winning score using each team's total score and time spent
+
+1. If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
+4. On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
+
