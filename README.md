@@ -5,10 +5,14 @@
 <summary><b>(click to expand)</b></summary>
 <!-- MarkdownTOC -->
   
-1. [Live demo](##liveDemo)
-1. [Description](##description)
-1. [Benefits of playing trivia and quiz games](##benefits)
+1. [Live demo](#liveDemo)
+1. [Description](#description)
+1. [Benefits of playing trivia and quiz games](#benefits)
 1. [Technology](#technology)  
+1. [Technical Requirements](#technicalRequirements)
+1. [Technologies Used](#technologiesUsed)  
+1. [Additional resources](#resources)
+1. [Download Install](#downloadInstall)
 
 <!-- /MarkdownTOC -->
 </details>
@@ -35,39 +39,45 @@ Quiz questions can help prevent this process to go so fast as it serves as a for
 <a id="technology"></a>
 ## Technology:
 
-JavaScript
-HTML/CSS
+- JavaScript
+- HTML/CSS
 
+<a id="technicalRequirements"></a>
 ## Technical requirements
 
 In this assignment, You'll create a Trivia game using JavaScript for the logic and DOM to manipulate HTML. se semantic, valid markup for HTML and CSS (must pass validation without errors)
 
+<a id="technologiesUsed"></a>
 ## Technologies Used
 
 Front-end: HTML, CSS;
 
-## Additional resources:
 
-A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
-[https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
+1. Additional resources:
 
-### Download & Install
+> A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
+
+> [https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
+
+1. Download & Install
+This: 
 
 ```bash
 npm install sweetalert2
 ```
 
-### Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
+1. Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
+This:
 
 ```bash
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 ```
 
-### Generate Trivia questions:
+1. Generate Trivia questions:
 
-[https://opentdb.com/api_config.php](https://opentdb.com/api_config.php) ;
+> [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php) ;
 
-[https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print) - JSON Pretty Print;
+> [https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print) - JSON Pretty Print;
 
 Before You Begin:
 
