@@ -86,9 +86,6 @@ This:
 ## Before You Begin:
 
 #### 1. Choose category;
-<p align="center" width="100%">
-    <img width="33%" src="choose_category.jpg"> 
-</p>
 
 ![category](src/choose_category.jpg)<br> 6. Display random questions from the question set;<br>
 ![category](src/question.jpg)<br> 7. Pick one answer (the button's background is changed to green color grey) and click on the "Check Answer" button:<br>
