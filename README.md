@@ -58,21 +58,21 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 1. Customizable JavaScript popup boxes
 
-> A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
-[https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
+1.1 A beautiful, responsive, customizable accessibility (WAI-ARIA) replacement for JavaScript popup boxes.
+> [https://sweetalert2.github.io/#frameworks-integrations](https://sweetalert2.github.io/#frameworks-integrations)
 
-1. Download & Install
+1.2 Download & Install
 This: 
 
-```bash
-npm install sweetalert2
-```
-1. Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
+>```bash
+>npm install sweetalert2
+>```
+1.3 Or grab from: [jsdelivr CDN](https://www.jsdelivr.com/package/npm/sweetalert2) ;
 This:
 
-```bash
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-```
+>```bash
+><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+>```
 
 2. Make a set of questions
 
